@@ -1,11 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.1.0
--- https://www.phpmyadmin.net/
---
--- Servidor: localhost
--- Tiempo de generación: 01-01-2023 a las 19:54:28
--- Versión del servidor: 8.0.23
--- Versión de PHP: 8.0.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -93,9 +85,10 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `descuento`, `id_categoria`, `activo`) VALUES
-(1, 'Zapatos color cafe', '<p>Zapato Confort casual para caballero color café, con corte de piel natural vacuno, acabado flother, diseño de costura en los costados y sutil diseño punteado.</p>\r\n<br>\r\n<b>Características:</b><br>\r\nMarca: Cklass<br>\r\nColección: Otoño-Invierno 2021<br>\r\nModelo: 273-29<br>\r\nColor: Café<br>\r\nMaterial corte: Piel Natural Vacuno<br>\r\nMaterial Suela: Sintética<br>', '599.00', 10, 1, 1),
-(2, 'Laptop 15.6\" con Windows 10', 'Capacidad:<b>12 GB RAM</b> | <b>512 GB SSD</b>\r\n<br>\r\nProcesador:<b>Intel Core i7 1165G7</b>\r\n<br>\r\nTarj. gráfica:<b>Intel Iris Xe Graphics G7 96EUs</b>\r\n\r\n<br>\r\n\r\n<p><b>Más detalles de este producto</b></p>\r\n<ul>\r\n<li>Pantalla LCD de 15.6\".</li>\r\n<li>Resolución de 1920x1080 px.</li>\r\n<li>Es antirreflejo.</li>\r\n<li>Es táctil.</li>\r\n<li>Conexión wifi y bluetooth.</li>\r\n<li>Cuenta con 3 puertos USB y puerto HDMI.</li>\r\n</ul>', '11999.00', 0, 1, 1),
-(3, 'Smartphone Negro 32gb Dual Sim 3gb Ram', '<p>Galaxy A02 es un equipo que te brinda excelentes beneficios: Su doble cámara trasera de 13 MP +2 MP y una cámara frontal de 5 MP te permitirán capturar los mejores momentos con una gran calidad.</p>\r\n\r\nMemoria interna: <b>32 GB</b>\r\n<br>\r\nMemoria RAM: <b>3 GB</b>\r\n<br>\r\nCámara frontal principal: <b>5 Mpx</b>\r\n<br>\r\nCámara trasera principal: <b>13 Mpx</b>', '2899.00', 0, 1, 1);
+(1, 'Anillo de rosa', 'Anillo de rosa oro con un diamante al centro', '85', 10, 1, 1),
+(2, 'Collar mariposa', 'Collar mariposa zafiros rosados en oro rosado con brillantes', '115', 0, 1, 1),
+(3, 'Aretes Flor Hilo Rosa', 'Elegantes aretes florales de hilo rosa', '14.50', 0, 1, 1);
+(4, 'Pulsera triple', 'Esclava TOUS Light de oro rosa de 18kt de cuatro tiras y tres rosetones de oro blanco de 18kt con diamantes talla brillante de 0,16ct', '235', 15, 1, 1);
 
 -- --------------------------------------------------------
 
