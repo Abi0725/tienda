@@ -2,7 +2,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.php">Tienda online</a>
+            <a class="navbar-brand" href="index.php">Joyeria Aurora</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarTop" aria-controls="navBarTop" aria-expanded="false">
                 <span class="navbar-toggler-icon"></span>
             </button>

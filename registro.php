@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Pantalla para registro de cliente
- * Autor: Marco Robles
- * Web: https://github.com/mroblesdev
- */
-
 require 'config/config.php';
 require 'config/database.php';
 require 'clases/clienteFunciones.php';
@@ -61,7 +55,7 @@ if (!empty($_POST)) {
             if ($idUsuario > 0) {
 
                 $url = SITE_URL . '/activa_cliente.php?id=' . $idUsuario . '&token=' . $token;
-                $asunto = "Activar cuenta - Tienda online";
+                $asunto = "Activar cuenta - Joyeria Aurora";
                 $cuerpo = "Estimado $nombres: <br> Para continuar con el proceso de registro es indispensable de click en la siguiente liga <a href='$url'>Activar cuenta</a>";
 
                 if ($mailer->enviarEmail($email, $asunto, $cuerpo)) {
@@ -87,7 +81,7 @@ if (!empty($_POST)) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda en linea</title>
+    <title>Joyeria Aurora</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="css/all.min.css" rel="stylesheet">
@@ -126,7 +120,7 @@ if (!empty($_POST)) {
                 </div>
 
                 <div class="col-md-6">
-                    <label for="dni"><span class="text-danger">*</span> DNI</label>
+                    <label for="dni"><span class="text-danger">*</span> Documento de Identidad</label>
                     <input type="text" name="dni" id="dni" class="form-control" requireda>
                 </div>
                 <div class="col-md-6">

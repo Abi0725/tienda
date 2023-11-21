@@ -5,8 +5,8 @@ class Database
 {
     private $hostname = "localhost";
     private $database = "tienda_online";
-    private $username = "root";
-    private $password = "";
+    private $username = "miranda_admin";
+    private $password = "xZs25lm7aa";
     private $charset = "utf8";
 
     function conectar()

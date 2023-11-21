@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Funciones de utilidad
- * Autor: Marco Robles
- * Web: https://github.com/mroblesdev
- */
 
 function esNulo(array $parametos)
 {
