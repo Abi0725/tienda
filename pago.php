@@ -5,10 +5,10 @@ require 'config/config.php';
 require 'config/database.php';
 
 // SDK de Mercado Pago
-require __DIR__ .  '/vendor/autoload.php';
+/*require __DIR__ .  '/vendor/autoload.php';
 MercadoPago\SDK::setAccessToken(TOKEN_MP);
 $preference = new MercadoPago\Preference();
-$productos_mp = array();
+$productos_mp = array();*/
 
 $productos = isset($_SESSION['carrito']['productos']) ? $_SESSION['carrito']['productos'] : null;
 
@@ -27,6 +27,19 @@ if ($productos != null) {
     header("Location: index.php");
     exit;
 }
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Agrega aquí la lógica para guardar la información en la base de datos
+    $sqlInsert = $con->prepare("INSERT INTO historial_compras (usuario_id, total) VALUES (?, ?)");
+    $sqlInsert->execute([$usuarioId, $total]); // Ajusta según la estructura de tu base de datos
+
+    // Puedes agregar más lógica aquí, como limpiar el carrito, enviar correos, etc.
+
+    // Redirige a una página de éxito o algún otro lugar después de la simulación
+    header("Location: compras.php");
+    exit;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="es" class="h-100">
@@ -57,13 +70,13 @@ if ($productos != null) {
             <div class="row">
                 <div class="col-lg-5 col-md-5 col-sm-12">
                     <h4>Detalles de pago</h4>
-                    <div lcass="row">
+                    <div class="row">
                         <div class="col-10">
                             <div id="paypal-button-container"></div>
                         </div>
                     </div>
 
-                    <div lcass="row">
+                    <div class="row">
                         <div class="col-10 text-center">
                             <div class="checkout-btn"></div>
                         </div>

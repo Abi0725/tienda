@@ -1,5 +1,10 @@
 {
     "require": {
         "mercadopago/dx-php": "2.5.3"
+    },
+    "config": {
+        "platform": {
+            "php": "7.2.24"  
+        }
     }
 }
